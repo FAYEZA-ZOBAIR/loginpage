@@ -1,0 +1,193 @@
+:root {
+    --primary-red: #AC5050;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-red);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.small {
+    font-size: 80%;
+    text-align: center;
+}
+
+.sectionss {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/orange-alcohol-ink-abstract-background_53876-108488.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.left p {
+    font-weight: 400;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+}
+
+.right .copy {
+    color: black;
+    text-align: center;
+}
+
+.right .copy p {
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+}
+
+.right form {
+    width: 328px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    padding: 1em;
+    margin-bottom: 1.25rem;
+    font-size: 0.865rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.inputC.password {
+    position: relative;
+}
+
+.inputC.password i {
+    position: absolute;
+    top: 42px;
+    right: 16px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 0 1.25rem 0;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background-color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+}
+
+.checkmark {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    top: -4px;
+    left: 0;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked + .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    width: 5px;
+    height: 10px;
+    left: 8px;
+    top: 4px;
+    transform: rotate(45deg);
+}
+
+/* Button styles */
+.signup-btn,
+.login-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-red);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+    background-color: #57281f;
+}
+
+.signup-btn:focus,
+.login-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(172, 80, 80, 0.5);
+}
+
+/* Disabled styles for buttons and checkboxes */
+.signup-btn:disabled,
+.login-btn:disabled,
+.checkbox-container input:disabled + .checkmark {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Hover effect for links within paragraphs */
+.right .copy p a:hover {
+    text-decoration: underline;
+}

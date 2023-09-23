@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SushiNinja</title>
+     <!-- Font Awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sectionss">
+        <div class="left">
+            <section class="copy">
+                <h2>Stay Connected with SushiNinja</h2>
+                <p>"SushiNinja: Unleash Your Sushi Samurai Spirit!"</p>
+            </section>
+        </div>
+        <div class="right">
+            <form action="login.php" method="post">
+                <section class="copy">
+                    <h2>Log In</h2>
+                    <div class="loginC">
+                        <p>Create a new account <a href="signin.html"><strong>Sign up</strong></a></p>
+                    </div>
+                </section>
+                <div class="inputC email">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="inputC password">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required>
+                    <i class="far fa-eye-slash"></i>
+                </div>
+                <button class="login-btn" type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
