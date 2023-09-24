@@ -1,16 +1,18 @@
 :root {
     --primary-red: #AC5050;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     background-color: #f9f9f9;
 }
 
 h1, h2 {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
 
@@ -28,14 +30,15 @@ a:hover {
     text-align: center;
 }
 
-.sectionss {
+.sect {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
 }
 
 .left {
-    height: 200px;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/orange-alcohol-ink-abstract-background_53876-108488.jpg');
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('https://i.pinimg.com/564x/38/e3/3b/38e33be2d1617c188e37ecf93328797e.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,10 +52,11 @@ a:hover {
     font-weight: 400;
 }
 .right {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-    justify-content: center; /* Center the content vertically */
+    align-items: center;
+    justify-content: center; 
 }
 
 .right .copy {
@@ -150,7 +154,6 @@ label {
     transform: rotate(45deg);
 }
 
-/* Button styles */
 .signup-btn,
 .login-btn {
     display: block;
@@ -166,7 +169,23 @@ label {
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-
+.btn {
+    width: 50%;
+    background-color: white;
+    color: var(--primary-red);
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--primary-red);
+    color: white;
+}
 .signup-btn:hover,
 .login-btn:hover {
     background-color: #57281f;
@@ -178,16 +197,38 @@ label {
     box-shadow: 0 0 5px rgba(172, 80, 80, 0.5);
 }
 
-/* Disabled styles for buttons and checkboxes */
-.signup-btn:disabled,
-.login-btn:disabled,
-.checkbox-container input:disabled + .checkmark {
-    background-color: #ccc;
-    color: #888;
-    cursor: not-allowed;
-}
-
-/* Hover effect for links within paragraphs */
 .right .copy p a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 905px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .left {
+        display: none; 
+    }
+
+    .right {
+        width: 100%; 
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 905px) {
+    .loginC {
+        display: none;
+    }
+}
+
+@media (max-width: 904px) {
+    .loginC {
+        display: block;
+    }
+}
+
+
